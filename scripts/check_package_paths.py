@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Check packaged Contest Skill local references.
+"""Check packaged mcm.skill local references.
 
 This script verifies that Markdown/code references to package-local paths resolve inside
-`contest-skill/`.
+`mcm/`.
 It also flags common private or non-packaged path remnants.
 """
 
@@ -48,7 +48,7 @@ def should_skip_missing(path_text: str, line: str) -> bool:
 
 
 def check_package(root: Path) -> Tuple[List[str], List[str]]:
-    skill_root = root / "contest-skill"
+    skill_root = root / "mcm"
     missing: List[str] = []
     private: List[str] = []
 
@@ -78,12 +78,12 @@ def check_package(root: Path) -> Tuple[List[str], List[str]]:
 
 
 def main(argv: Sequence[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Check Contest Skill package references.")
+    parser = argparse.ArgumentParser(description="Check mcm.skill package references.")
     parser.add_argument(
         "root",
         nargs="?",
         default=".",
-        help="Path to contest-skill-open root. Defaults to current directory.",
+        help="Path to the mcm.skill repository root. Defaults to current directory.",
     )
     args = parser.parse_args(argv)
 

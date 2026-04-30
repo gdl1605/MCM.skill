@@ -1,9 +1,9 @@
 ---
-name: contest-skill
+name: mcm
 description: Workflow-driven skill for mathematical modeling contests. Use when Codex needs to read and split a contest problem, identify each subproblem type, choose a primary modeling path and, when needed, a backup path, design preprocessing, plan and execute code implementation, add validation or sensitivity analysis, organize plots and tables, draft or revise paper sections, or audit an existing model/paper/code for gaps. Trigger even when the user only says “帮我建模”, “分析这道赛题”, “根据结果写论文”, “补灵敏度分析”, “整理图表和结论”, or “检查论文/代码哪里不稳”.
 ---
 
-# Contest Skill
+# mcm.skill
 
 ## Mission
 

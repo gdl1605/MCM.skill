@@ -1,6 +1,6 @@
-# Contest Skill
+# mcm.skill
 
-Contest Skill is a Chinese mathematical modeling contest skill for Codex-style AI agents.
+mcm.skill is a Chinese mathematical modeling contest skill for Codex-style AI agents.
 It packages a contest workflow from problem reading to paper writing, with reusable
 references, output contracts, code snippets, answer-table schemas, and writing templates.
 
@@ -30,33 +30,33 @@ results, and convert stable outputs into Chinese paper sections.
 Copy the skill folder into your Codex skills directory:
 
 ```bash
-cp -R contest-skill ~/.codex/skills/contest-skill
+cp -R mcm ~/.codex/skills/mcm
 ```
 
-Then invoke it explicitly with `$contest-skill`, or let Codex trigger it when the task is clearly about mathematical modeling contests.
+Then invoke it explicitly with `$mcm`, or let Codex trigger it when the task is clearly about mathematical modeling contests.
 
 ## Example Prompts
 
 ```text
-Use $contest-skill to analyze this modeling contest problem and produce a Chinese executable workflow.
+Use $mcm to analyze this modeling contest problem and produce a Chinese executable workflow.
 ```
 
 ```text
-用 $contest-skill 帮我拆解这道赛题，判断每问题型，并给出主模型、备选模型和验证方案。
+用 $mcm 帮我拆解这道赛题，判断每问题型，并给出主模型、备选模型和验证方案。
 ```
 
 ```text
-用 $contest-skill 检查我当前的模型和论文草稿，指出 P0/P1/P2 缺口。
+用 $mcm 检查我当前的模型和论文草稿，指出 P0/P1/P2 缺口。
 ```
 
 ```text
-用 $contest-skill 根据这些结果表写摘要素材池、图表映射和每问结论句。
+用 $mcm 根据这些结果表写摘要素材池、图表映射和每问结论句。
 ```
 
 ## Folder Layout
 
 ```text
-contest-skill-open/
+mcm.skill/
 ├── README.md
 ├── LICENSE
 ├── NOTICE.md
@@ -65,7 +65,7 @@ contest-skill-open/
 ├── CHANGELOG.md
 ├── scripts/
 │   └── check_package_paths.py
-├── contest-skill/
+├── mcm/
 │   ├── SKILL.md
 │   ├── agents/
 │   │   └── openai.yaml
@@ -104,14 +104,14 @@ contest-skill-open/
 
 ## Package Contents
 
-- `contest-skill/SKILL.md`: Core workflow and trigger instructions.
-- `contest-skill/references/`: Stage-specific playbooks and output contracts.
-- `contest-skill/references/distill/`: Distilled modeling and writing rules.
-- `contest-skill/assets/snippets/`: Lightweight baseline code assets.
-- `contest-skill/assets/paper-template/`: Chinese paper skeleton and section templates.
-- `contest-skill/assets/xlsx-schema/`: Answer-table schema anchors.
-- `contest-skill/assets/end_to_end_demo/`: Minimal ranking-to-table demo.
-- `contest-skill/scripts/deliverable_lint.py`: Lightweight delivery completeness check.
+- `mcm/SKILL.md`: Core workflow and trigger instructions.
+- `mcm/references/`: Stage-specific playbooks and output contracts.
+- `mcm/references/distill/`: Distilled modeling and writing rules.
+- `mcm/assets/snippets/`: Lightweight baseline code assets.
+- `mcm/assets/paper-template/`: Chinese paper skeleton and section templates.
+- `mcm/assets/xlsx-schema/`: Answer-table schema anchors.
+- `mcm/assets/end_to_end_demo/`: Minimal ranking-to-table demo.
+- `mcm/scripts/deliverable_lint.py`: Lightweight delivery completeness check.
 
 ## Evidence Policy
 
@@ -161,17 +161,17 @@ Before publishing a release, run:
 python3 scripts/check_package_paths.py
 ```
 
-This checks that package-local references inside `contest-skill/` resolve within the packaged
+This checks that package-local references inside `mcm/` resolve within the packaged
 skill folder, and that common private or non-packaged path markers are not present elsewhere.
 
 ## Files In This Package
 
 - Open-source metadata files: `README.md`, `LICENSE`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, `CHANGELOG.md`
-- Core skill logic: `contest-skill/SKILL.md`, `contest-skill/agents/openai.yaml`
-- Reference playbooks: `contest-skill/references/*`
-- Runtime assets: `contest-skill/assets/*`
-- Minimal delivery lint: `contest-skill/scripts/deliverable_lint.py`
-- Distill knowledge base: `contest-skill/references/distill/*`
+- Core skill logic: `mcm/SKILL.md`, `mcm/agents/openai.yaml`
+- Reference playbooks: `mcm/references/*`
+- Runtime assets: `mcm/assets/*`
+- Minimal delivery lint: `mcm/scripts/deliverable_lint.py`
+- Distill knowledge base: `mcm/references/distill/*`
 - Package path check: `scripts/check_package_paths.py`
 
 ## Note

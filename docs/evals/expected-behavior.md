@@ -1,6 +1,6 @@
 # Expected Behavior
 
-This file defines the minimum behavior expected from Contest Skill during smoke checks.
+This file defines the minimum behavior expected from mcm.skill during smoke checks.
 
 ## Language
 

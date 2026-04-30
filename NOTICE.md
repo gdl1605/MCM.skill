@@ -1,6 +1,6 @@
 # Notice
 
-Contest Skill is an open-source skill package for Chinese mathematical modeling contests.
+mcm.skill is an open-source skill package for Chinese mathematical modeling contests.
 
 This repository contains distilled workflows, reusable modeling rules, output contracts,
 writing templates, lightweight code snippets, and package metadata. It is designed to help

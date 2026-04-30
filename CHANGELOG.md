@@ -2,9 +2,9 @@
 
 ## 0.1.0-alpha
 
-- Packaged `contest-skill/` as a self-contained Codex skill.
+- Packaged `mcm/` as a self-contained Codex skill.
 - Added reusable references for problem typing, model selection, data inspection, validation, plotting, writing, output contracts, and common pitfalls.
-- Added packaged distillation references under `contest-skill/references/distill/`.
+- Added packaged distillation references under `mcm/references/distill/`.
 - Added reusable assets for snippets, answer-table schemas, paper templates, and a minimal end-to-end ranking demo.
 - Added `deliverable_lint.py` for lightweight contest-delivery completeness checks.
 - Added open-source metadata: `README.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, `LICENSE`, and `.gitignore`.
